@@ -8,7 +8,7 @@ module.exports = {
     //查询所有类
     'SELECT_ALLCLASS': 'select * from classifylist',
     //查询分类是否存在
-    'ISHAS_CLASS': 'select * from lcassify where C_name=?'
-        //添加分类
-    'ADD_CLASS': 'insert into classify (c_id,c_name,uid,type) values (?,?,?,?)'
+    'ISHAS_CLASS': 'select * from classifylist where (uid="*" or uid=?) and c_name=? and type=?',
+    //添加分类
+    'ADD_CLASS': 'insert into classifylist (c_id,uid,c_name,icon_name,type) values (?,?,?,?,?)'
 }
